@@ -1,0 +1,2 @@
+# naiveBayes
+Naive bayes classifier.
