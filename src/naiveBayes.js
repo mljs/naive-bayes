@@ -6,11 +6,24 @@ var Stat = require('ml-stat');
 module.exports.NaiveBayes = NaiveBayes;
 module.exports.separateClasses = separateClasses;
 
+/**
+ * Constructor for the Naive Bayes classifier
+ * @param reload
+ * @param model
+ * @constructor
+ */
 function NaiveBayes(reload, model) {
+    if(reload) {
+        this.means = model.means;
+        this.calculateProbabilities = model.calculateProbabilities;
+    }
 }
 
 /**
- * Note: in the case to have a feature in the same class with the same number in all cases will not work
+ *
+ *
+ * WARNING: in the case that one class, all the cases in one or more features have the same value, the
+ * Naive Bayes classifier will not work well.
  * @param trainingSet
  * @param trainingLabels
  */
@@ -77,6 +90,21 @@ function getCurrentClass(currentCase, mean, classes) {
 
     return predictedClass;
 }
+
+NaiveBayes.prototype.export = function () {
+    return {
+        modelName: "NaiveBayes",
+        means: this.means,
+        calculateProbabilities: this.calculateProbabilities
+    };
+};
+
+NaiveBayes.load = function (model) {
+    if(model.modelName !== 'NaiveBayes')
+        throw new RangeError("The given model is invalid!");
+
+    return new NaiveBayes(true, model);
+};
 
 function calculateLogProbability(value, mean, C1, C2) {
     var value = value - mean;
