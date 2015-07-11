@@ -1,1 +1,2 @@
-module.exports = require('./naiveBayes');
+module.exports = exports = require('./naiveBayes').NaiveBayes;
+exports.separateClasses = require('./naiveBayes').separateClasses;
