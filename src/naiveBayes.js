@@ -32,10 +32,10 @@ function NaiveBayes(reload, model) {
  */
 NaiveBayes.prototype.train = function (trainingSet, trainingLabels) {
     var C1 = Math.sqrt(2*Math.PI); // constant to precalculate the squared root
-    if(!Matrix.isMatrix(trainingSet)) var X = Matrix(trainingSet);
-    else X = trainingSet.clone();
+    if(!Matrix.isMatrix(trainingSet)) trainingSet = new Matrix(trainingSet);
+    else trainingSet = trainingSet.clone();
 
-    if(X.rows !== trainingLabels.length)
+    if(trainingSet.rows !== trainingLabels.length)
         throw new RangeError("the size of the training set and the training labels must be the same.");
 
     var separatedClasses = separateClasses(trainingSet, trainingLabels);
@@ -45,7 +45,7 @@ NaiveBayes.prototype.train = function (trainingSet, trainingLabels) {
         var means = Stat.matrix.mean(separatedClasses[i]);
         var std = Stat.matrix.standardDeviation(separatedClasses[i], means);
 
-        var logPriorProbability = Math.log(separatedClasses[i].rows / X.rows);
+        var logPriorProbability = Math.log(separatedClasses[i].rows / trainingSet.rows);
         calculateProbabilities[i] = new Array(means.length + 1);
 
         calculateProbabilities[i][0] = logPriorProbability;
