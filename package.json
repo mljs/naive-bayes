@@ -8,9 +8,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --require should --reporter mocha-better-spec-reporter --recursive",
-    "build": "gulp build"
+    "test": "mocha --require should --reporter mocha-better-spec-reporter --recursive"
   },
+  "engines": {
+    "node": ">=2.0.0"
+  },
+  "tonicExampleFilename" : "./tonic.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mljs/naiveBayes.git"
