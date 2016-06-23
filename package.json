@@ -16,7 +16,7 @@
   "tonicExampleFilename" : "./tonic.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mljs/naiveBayes.git"
+    "url": "https://github.com/mljs/naive-bayes.git"
   },
   "keywords": [
     "naive",
@@ -28,9 +28,9 @@
   "author": "Jefferson Hernández",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mljs/naiveBayes/issues"
+    "url": "https://github.com/mljs/naive-bayes/issues"
   },
-  "homepage": "https://github.com/mljs/naiveBayes",
+  "homepage": "https://github.com/mljs/naive-bayes",
   "dependencies": {
     "ml-matrix": "^1.0.3",
     "ml-stat": "^1.1.0"
