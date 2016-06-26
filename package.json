@@ -1,6 +1,6 @@
 {
   "name": "ml-naivebayes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Naive bayes library",
   "main": "src/index.js",
   "directories": {
@@ -13,7 +13,7 @@
   "engines": {
     "node": ">=2.0.0"
   },
-  "tonicExampleFilename" : "./tonic.js",
+  "tonicExampleFilename": "./tonic.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mljs/naive-bayes.git"
