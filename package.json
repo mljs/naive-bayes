@@ -1,6 +1,6 @@
 {
   "name": "ml-naivebayes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Naive bayes library",
   "main": "src/index.js",
   "directories": {
