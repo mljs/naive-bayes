@@ -47,6 +47,50 @@ describe('Naive bayes', function () {
         result[4].should.be.equal(1);
     });
 
+    it('two feature test', function () {
+        var cases = [
+                      [0, 0],
+                      [0.5, 0.5],
+                      [1, 0],
+                      [0, 1],
+                      [1, 1]
+                    ];
+        var predictions = [0, 0, 1, 1, 1];
+        var nb = new NaiveBayes();
+        nb.train(cases, predictions);
+        var result = nb.predict(cases);
+
+        result[0].should.be.equal(0);
+        result[1].should.be.equal(0);
+        result[2].should.be.equal(1);
+        result[3].should.be.equal(1);
+        result[4].should.be.equal(1);
+    });
+
+    it('Third feature test', function () {
+        var cases = [
+                      [0, 0, 0],
+                      [0, 0, 1],
+                      [0.5, 0.5, 0],
+                      [0.5, 0.5, 0.5],
+                      [1, 0, 0],
+                      [0, 1, 1],
+                      [1, 1, 0.5]
+                    ];
+        var predictions = [0, 1, 0, 0, 1, 1, 1];
+        var nb = new NaiveBayes();
+        nb.train(cases, predictions);
+        var result = nb.predict(cases);
+
+        result[0].should.be.equal(0);
+        result[1].should.be.equal(1);
+        result[2].should.be.equal(0);
+        result[3].should.be.equal(0);
+        result[4].should.be.equal(1);
+        result[5].should.be.equal(1);
+        result[6].should.be.equal(1);
+    });
+
     it('Export and import', function () {
         var cases = [[6,148,72,35,0,33.6,0.627,5],
             [1.50,85,66.5,29,0,26.6,0.351,31],
