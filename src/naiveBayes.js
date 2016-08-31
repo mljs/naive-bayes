@@ -94,7 +94,7 @@ function getCurrentClass(currentCase, mean, classes) {
     // going through all precalculated values for the classes
     for(var i = 0; i < classes.length; ++i) {
         var currentProbability = classes[i][0]; // initialize with the prior probability
-        for(var j = 1; j < classes[0][1].length + 1; ++j) {
+        for(var j = 1; j < mean[0].length + 1; ++j) {
             currentProbability += calculateLogProbability(currentCase[j - 1], mean[i][j - 1], classes[i][j][0], classes[i][j][1]);
         }
 
