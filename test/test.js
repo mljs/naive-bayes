@@ -1,7 +1,8 @@
 'use strict';
 
 var NaiveBayes = require('..');
-var separateClasses = require('..').separateClasses;
+var MultimonialNB = require('../src/MultinomialNB');
+var separateClasses = require('../src/utils').separateClasses;
 var Matrix = require('ml-matrix');
 
 describe('Naive bayes', function () {
@@ -68,4 +69,20 @@ describe('Naive bayes', function () {
         result[3].should.be.equal(0);
         result[4].should.be.equal(1);
     });
+});
+
+describe('Multinomial Naive Bayes', function () {
+   it.only('test', function () {
+       var cases = [[2, 1, 0, 0, 0, 0],
+           [2, 0, 1, 0, 0, 0],
+           [1, 0, 0, 1, 0, 0],
+           [1, 0, 0, 0, 1, 1]];
+       var predictions = [0, 0, 0, 1];
+
+       var predict = [[3, 0, 0, 0, 1, 1]];
+
+       var mnb = new MultimonialNB();
+       mnb.train(cases, predictions);
+       mnb.predict(predict);
+   })
 });

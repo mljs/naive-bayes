@@ -2,9 +2,10 @@
 
 var Matrix = require('ml-matrix');
 var Stat = require('ml-stat');
+var Utils = require('./utils');
 
-module.exports.NaiveBayes = NaiveBayes;
-module.exports.separateClasses = separateClasses;
+module.exports = NaiveBayes;
+//module.exports.separateClasses = separateClasses;
 
 /**
  * Constructor for the Naive Bayes classifier, the parameters here is just for loading purposes.
@@ -38,7 +39,7 @@ NaiveBayes.prototype.train = function (trainingSet, trainingLabels) {
     if(trainingSet.rows !== trainingLabels.length)
         throw new RangeError("the size of the training set and the training labels must be the same.");
 
-    var separatedClasses = separateClasses(trainingSet, trainingLabels);
+    var separatedClasses = Utils.separateClasses(trainingSet, trainingLabels);
     var calculateProbabilities = new Array(separatedClasses.length);
     this.means = new Array(separatedClasses.length);
     for(var i = 0; i < separatedClasses.length; ++i) {
@@ -143,35 +144,4 @@ NaiveBayes.load = function (model) {
 function calculateLogProbability(value, mean, C1, C2) {
     var value = value - mean;
     return Math.log(C1 * Math.exp((value * value) / C2))
-}
-
-/**
- * Function that retuns an array of matrices of the cases that belong to each class.
- * @param X - dataset
- * @param y - predictions
- * @returns {Array}
- */
-function separateClasses(X, y) {
-    var features = X.columns;
-
-    var classes = 0;
-    var totalPerClasses = new Array(100); // max upperbound of classes
-    for (var i = 0; i < y.length; i++) {
-        if(totalPerClasses[y[i]] === undefined) {
-            totalPerClasses[y[i]] = 0;
-            classes++;
-        }
-        totalPerClasses[y[i]]++;
-    }
-    var separatedClasses = new Array(classes);
-    var currentIndex = new Array(classes);
-    for(i = 0; i < classes; ++i) {
-        separatedClasses[i] = new Matrix(totalPerClasses[i], features);
-        currentIndex[i] = 0;
-    }
-    for(i = 0; i < X.rows; ++i) {
-        separatedClasses[y[i]].setRow(currentIndex[y[i]], X.getRow(i));
-        currentIndex[y[i]]++;
-    }
-    return separatedClasses;
 }
