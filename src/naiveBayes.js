@@ -1,6 +1,6 @@
 'use strict';
 
-var Matrix = require('ml-matrix');
+var Matrix = require('ml-matrix').Matrix;
 var Stat = require('ml-stat');
 var Utils = require('./utils');
 
