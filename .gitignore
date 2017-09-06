@@ -1,2 +1,7 @@
-.idea
 node_modules
+.idea
+logs
+*.log
+npm-debug.log*
+coverage
+lib
