@@ -1,6 +1,7 @@
 import Matrix from 'ml-matrix';
 
 /**
+ * @private
  * Function that retuns an array of matrices of the cases that belong to each class.
  * @param {Matrix} X - dataset
  * @param {Array} y - predictions

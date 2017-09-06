@@ -8,11 +8,11 @@ import {separateClasses} from './utils';
 export class GaussianNB {
 
     /**
+     * @constructor
      * Constructor for the Gaussian Naive Bayes classifier, the parameters here is just for loading purposes.
      *
      * @param {boolean} reload
      * @param {object} model
-     * @constructor
      */
     constructor(reload, model) {
         if (reload) {

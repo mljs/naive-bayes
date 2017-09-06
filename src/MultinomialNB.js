@@ -7,10 +7,10 @@ import {separateClasses} from './utils';
 export class MultinomialNB {
 
     /**
+     * @constructor
      * Constructor for Multinomial Naive Bayes, the model parameter is for load purposes.
      *
-     * @param {object} [model] - for load purposes.
-     * @constructor
+     * @param {object} model - for load purposes.
      */
     constructor(model) {
         if (model) {
