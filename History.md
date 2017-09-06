@@ -1,3 +1,13 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/mljs/naive-bayes/compare/v2.0.0...v3.0.0) (2017-09-06)
+
+
+### Features
+
+* add multinomial bayes ([b347332](https://github.com/mljs/naive-bayes/commit/b347332))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/mljs/naive-bayes/compare/v1.0.3...v2.0.0) (2017-07-21)
 
