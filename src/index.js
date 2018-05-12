@@ -1,2 +1,2 @@
-export {GaussianNB} from './GaussianNB';
-export {MultinomialNB} from './MultinomialNB';
+export { GaussianNB } from './GaussianNB';
+export { MultinomialNB } from './MultinomialNB';

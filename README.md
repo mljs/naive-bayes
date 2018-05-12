@@ -1,15 +1,17 @@
-# Naive Bayes
+# ml-naivebayes
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]
-  [![David deps][david-image]][david-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][codecov-image]][codecov-url]
+[![npm download][download-image]][download-url]
 
 Naive bayes classifiers.
 
 ## Installation
 
-`$ npm install ml-naivebayes`
+`npm install ml-naivebayes`
+
+## [API Documentation](https://mljs.github.io/naive-bayes/)
 
 ## Usage
 
@@ -17,7 +19,7 @@ Naive bayes classifiers.
 
 ```js
 // assuming that you created Xtrain, Xtest, Ytrain, Ytest
-import {GaussianNB} from 'ml-naivebayes'
+import { GaussianNB } from 'ml-naivebayes';
 
 var model = new GaussianNB();
 model.train(Xtrain, Ytrain);
@@ -29,7 +31,7 @@ var predictions = model.predict(Xtest);
 
 ```js
 // assuming that you created Xtrain, Xtest, Ytrain, Ytest
-import {MultinomialNB} from 'ml-naivebayes'
+import { MultinomialNB } from 'ml-naivebayes';
 
 var model = new MultinomialNB();
 model.train(Xtrain, Ytrain);
@@ -37,11 +39,9 @@ model.train(Xtrain, Ytrain);
 var predictions = model.predict(Xtest);
 ```
 
-## [API Documentation](http://mljs.github.io/naive-bayes/)
-
 ## Authors
 
-- [Jefferson Hernandez](https://github.com/JeffersonH44)
+* [Jefferson Hernandez](https://github.com/JeffersonH44)
 
 ## License
 
@@ -51,7 +51,7 @@ var predictions = model.predict(Xtest);
 [npm-url]: https://npmjs.org/package/ml-naivebayes
 [travis-image]: https://img.shields.io/travis/mljs/naive-bayes/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/mljs/naive-bayes
-[david-image]: https://img.shields.io/david/mljs/naive-bayes.svg?style=flat-square
-[david-url]: https://david-dm.org/mljs/naive-bayes
+[codecov-image]: https://img.shields.io/codecov/c/github/mljs/naive-bayes.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/mljs/naive-bayes
 [download-image]: https://img.shields.io/npm/dm/ml-naivebayes.svg?style=flat-square
 [download-url]: https://npmjs.org/package/ml-naivebayes

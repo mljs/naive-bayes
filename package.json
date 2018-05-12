@@ -9,11 +9,13 @@
     "lib"
   ],
   "scripts": {
+    "compile": "rollup -c",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepublish": "rollup -c",
-    "test": "run-s testonly eslint",
-    "testonly": "jest"
+    "prepublishOnly": "npm run compile",
+    "test": "run-s test-coverage eslint",
+    "test-only": "jest",
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -39,14 +41,15 @@
     "ml-stat": "^1.1.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "eslint": "^4.6.1",
-    "eslint-config-cheminfo": "^1.8.0",
-    "eslint-plugin-no-only-tests": "^2.0.0",
-    "jest": "^21.0.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-cheminfo": "^1.17.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "^22.4.3",
     "ml-dataset-iris": "^1.0.0",
     "npm-run-all": "^4.0.2",
     "random-js": "^1.0.8",
-    "rollup": "^0.49.2"
+    "rollup": "^0.58.2"
   }
 }
