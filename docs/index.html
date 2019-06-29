@@ -1,20 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title>ml-naivebayes 3.0.0 | Documentation</title>
+  <meta charset='utf-8'>
+  <title>ml-naivebayes 4.0.0 | Documentation</title>
+  <meta name='description' content='Naive bayes library'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
-  <link href='assets/style.css' type='text/css' rel='stylesheet' />
-  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
 </head>
-<body class='documentation'>
-  <div class='max-width-4 mx-auto'>
-    <div class='clearfix md-mxn2'>
-      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>ml-naivebayes</h3>
-          <div class='mb1'><code>3.0.0</code></div>
+          <div class='mb1'><code>4.0.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -25,148 +26,134 @@
               
                 
                 <li><a
-                  href='#gaussiannb'
-                  class=" toggle-sibling">
-                  GaussianNB
-                  <span class='icon'>▸</span>
+                  href='#constructor'
+                  class="">
+                  constructor
+                  
                 </a>
-                
-                <div class='toggle-target display-none'>
-                  
-                  <ul class='list-reset py1-ul pl1'>
-                    <li class='h5'><span>Static members</span></li>
-                    
-                      <li><a
-                        href='#gaussiannbload'
-                        class='regular pre-open'>
-                        .load
-                      </a></li>
-                    
-                    </ul>
-                  
-                  
-                    <ul class='list-reset py1-ul pl1'>
-                      <li class='h5'><span>Instance members</span></li>
-                      
-                      <li><a
-                        href='#gaussiannbtojson'
-                        class='regular pre-open'>
-                        #toJSON
-                      </a></li>
-                      
-                      <li><a
-                        href='#gaussiannbpredict'
-                        class='regular pre-open'>
-                        #predict
-                      </a></li>
-                      
-                      <li><a
-                        href='#gaussiannbtrain'
-                        class='regular pre-open'>
-                        #train
-                      </a></li>
-                      
-                      <li><a
-                        href='#gaussiannbconstructor'
-                        class='regular pre-open'>
-                        #constructor
-                      </a></li>
-                      
-                    </ul>
-                  
-                  
-                  
-                </div>
                 
                 </li>
               
                 
                 <li><a
-                  href='#multinomialnb'
-                  class=" toggle-sibling">
-                  MultinomialNB
-                  <span class='icon'>▸</span>
+                  href='#predict'
+                  class="">
+                  predict
+                  
                 </a>
                 
-                <div class='toggle-target display-none'>
+                </li>
+              
+                
+                <li><a
+                  href='#tojson'
+                  class="">
+                  toJSON
                   
-                  <ul class='list-reset py1-ul pl1'>
-                    <li class='h5'><span>Static members</span></li>
-                    
-                      <li><a
-                        href='#multinomialnbload'
-                        class='regular pre-open'>
-                        .load
-                      </a></li>
-                    
-                    </ul>
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#train'
+                  class="">
+                  train
                   
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#load'
+                  class="">
+                  load
                   
-                    <ul class='list-reset py1-ul pl1'>
-                      <li class='h5'><span>Instance members</span></li>
-                      
-                      <li><a
-                        href='#multinomialnbconstructor'
-                        class='regular pre-open'>
-                        #constructor
-                      </a></li>
-                      
-                      <li><a
-                        href='#multinomialnbtojson'
-                        class='regular pre-open'>
-                        #toJSON
-                      </a></li>
-                      
-                      <li><a
-                        href='#multinomialnbpredict'
-                        class='regular pre-open'>
-                        #predict
-                      </a></li>
-                      
-                      <li><a
-                        href='#multinomialnbtrain'
-                        class='regular pre-open'>
-                        #train
-                      </a></li>
-                      
-                    </ul>
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#constructor'
+                  class="">
+                  constructor
                   
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#predict'
+                  class="">
+                  predict
                   
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tojson'
+                  class="">
+                  toJSON
                   
-                </div>
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#train'
+                  class="">
+                  train
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#load'
+                  class="">
+                  load
+                  
+                </a>
                 
                 </li>
               
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
-            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
           </div>
         </div>
       </div>
-      <div class='fix-margin-3'>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='gaussiannb'>
-      GaussianNB
+    <h3 class='fl m0' id='constructor'>
+      constructor
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L8-L108'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/GaussianNB.js#L12-L17'>
       <span>src/GaussianNB.js</span>
       </a>
     
   </div>
   
 
-  
+  <p>Constructor for the Gaussian Naive Bayes classifier, the parameters here is just for loading purposes.</p>
 
-  <div class='pre p1 fill-light mt0'>new GaussianNB(reload: any, model: any)</div>
+    <div class='pre p1 fill-light mt0'>new constructor(reload: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, model: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -183,7 +170,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>reload</span> <code class='quiet'>(any)</code>
+            <span class='code bold'>reload</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
 	    
           </div>
           
@@ -191,7 +178,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>model</span> <code class='quiet'>(any)</code>
+            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
 	    
           </div>
           
@@ -204,74 +191,6 @@
 
   
 
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Static Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='gaussiannbload'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>load(model)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L101-L107'>
-      <span>src/GaussianNB.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Function that create a GaussianNB classifier with the given model.</p>
-
-
-  <div class='pre p1 fill-light mt0'>load(model: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="#gaussiannb">GaussianNB</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="#gaussiannb">GaussianNB</a></code>:
-        
-
-      
-    
   
 
   
@@ -285,95 +204,20 @@
   
 </section>
 
-      </div>
-    </div>
-  
-</div>
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='gaussiannbtojson'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>toJSON()</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L88-L94'>
-      <span>src/GaussianNB.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Function that export the NaiveBayes model.</p>
-
-
-  <div class='pre p1 fill-light mt0'>toJSON(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+          
         
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='gaussiannbpredict'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>predict(dataset)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='predict'>
+      predict
+    </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L70-L82'>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/GaussianNB.js#L74-L93'>
       <span>src/GaussianNB.js</span>
       </a>
     
@@ -382,8 +226,7 @@
 
   <p>function that predicts each row of the dataset (must be a matrix).</p>
 
-
-  <div class='pre p1 fill-light mt0'>predict(dataset: (Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+    <div class='pre p1 fill-light mt0'>predict(dataset: (Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -400,7 +243,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>dataset</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+            <span class='code bold'>dataset</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
 	    
           </div>
           
@@ -414,7 +257,7 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
         
 
       
@@ -430,26 +273,84 @@
   
 
   
+
+  
 </section>
 
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='gaussiannbtrain'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>train(trainingSet, trainingLabels)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='tojson'>
+      toJSON
+    </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L34-L62'>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/GaussianNB.js#L99-L105'>
+      <span>src/GaussianNB.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Function that export the NaiveBayes model.</p>
+
+    <div class='pre p1 fill-light mt0'>toJSON(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='train'>
+      train
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/GaussianNB.js#L29-L66'>
       <span>src/GaussianNB.js</span>
       </a>
     
@@ -462,8 +363,7 @@ n represents the number of classes.</p>
 <p>WARNING: in the case that one class, all the cases in one or more features have the same value, the
 Naive Bayes classifier will not work well.</p>
 
-
-  <div class='pre p1 fill-light mt0'>train(trainingSet: (Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>), trainingLabels: (Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</div>
+    <div class='pre p1 fill-light mt0'>train(trainingSet: (Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>), trainingLabels: (Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</div>
   
   
 
@@ -480,7 +380,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>trainingSet</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+            <span class='code bold'>trainingSet</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
 	    
           </div>
           
@@ -488,7 +388,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>trainingLabels</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+            <span class='code bold'>trainingLabels</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
 	    
           </div>
           
@@ -508,89 +408,6 @@ Naive Bayes classifier will not work well.</p>
   
 
   
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='gaussiannbconstructor'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>constructor(reload, model)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/GaussianNB.js#L17-L22'>
-      <span>src/GaussianNB.js</span>
-      </a>
-    
-  </div>
-  
-
-  
-
-  <div class='pre p1 fill-light mt0'>constructor(reload: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, model: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>reload</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-</div>
 
   
 
@@ -600,26 +417,26 @@ Naive Bayes classifier will not work well.</p>
           
         
           
-            <section class='p2 mb2 clearfix bg-white minishadow'>
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='multinomialnb'>
-      MultinomialNB
+    <h3 class='fl m0' id='load'>
+      load
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L7-L92'>
-      <span>src/MultinomialNB.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/GaussianNB.js#L112-L121'>
+      <span>src/GaussianNB.js</span>
       </a>
     
   </div>
   
 
-  
+  <p>Function that create a GaussianNB classifier with the given model.</p>
 
-  <div class='pre p1 fill-light mt0'>new MultinomialNB(model: any)</div>
+    <div class='pre p1 fill-light mt0'>load(model: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): GaussianNB</div>
   
   
 
@@ -636,69 +453,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>model</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Static Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='multinomialnbload'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>load(model)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L85-L91'>
-      <span>src/MultinomialNB.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Creates a new MultinomialNB from the given model</p>
-
-
-  <div class='pre p1 fill-light mt0'>load(model: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="#multinomialnb">MultinomialNB</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
 	    
           </div>
           
@@ -712,7 +467,7 @@ Naive Bayes classifier will not work well.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="#multinomialnb">MultinomialNB</a></code>:
+      <code>GaussianNB</code>:
         
 
       
@@ -728,43 +483,33 @@ Naive Bayes classifier will not work well.</p>
   
 
   
+
+  
 </section>
 
-      </div>
-    </div>
-  
-</div>
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='multinomialnbconstructor'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>constructor(model)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='constructor'>
+      constructor
+    </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L15-L20'>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/MultinomialNB.js#L11-L18'>
       <span>src/MultinomialNB.js</span>
       </a>
     
   </div>
   
 
-  
+  <p>Constructor for Multinomial Naive Bayes, the model parameter is for load purposes.</p>
 
-  <div class='pre p1 fill-light mt0'>constructor(model: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>new constructor(model: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -781,7 +526,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
 	    for load purposes.
 
           </div>
@@ -804,89 +549,24 @@ Naive Bayes classifier will not work well.</p>
   
 
   
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='multinomialnbtojson'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>toJSON()</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L72-L78'>
-      <span>src/MultinomialNB.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Function that saves the current model.</p>
-
-
-  <div class='pre p1 fill-light mt0'>toJSON(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
-        model in JSON format.
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
 
   
 </section>
 
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='multinomialnbpredict'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>predict(dataset)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='predict'>
+      predict
+    </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L56-L66'>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/MultinomialNB.js#L66-L81'>
       <span>src/MultinomialNB.js</span>
       </a>
     
@@ -895,8 +575,7 @@ Naive Bayes classifier will not work well.</p>
 
   <p>Retrieves the predictions for the dataset with the current model.</p>
 
-
-  <div class='pre p1 fill-light mt0'>predict(dataset: (Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+    <div class='pre p1 fill-light mt0'>predict(dataset: (Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
   
   
 
@@ -913,7 +592,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>dataset</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+            <span class='code bold'>dataset</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
 	    
           </div>
           
@@ -927,7 +606,7 @@ Naive Bayes classifier will not work well.</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
         predictions from the dataset.
 
       
@@ -943,26 +622,84 @@ Naive Bayes classifier will not work well.</p>
   
 
   
+
+  
 </section>
 
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='multinomialnbtrain'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>train(trainingSet, trainingLabels)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='tojson'>
+      toJSON
+    </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/3d94969543e80a700f037c267f8181bc3f106421/src/MultinomialNB.js#L27-L49'>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/MultinomialNB.js#L87-L93'>
+      <span>src/MultinomialNB.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Function that saves the current model.</p>
+
+    <div class='pre p1 fill-light mt0'>toJSON(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        model in JSON format.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='train'>
+      train
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/MultinomialNB.js#L25-L59'>
       <span>src/MultinomialNB.js</span>
       </a>
     
@@ -971,8 +708,7 @@ Naive Bayes classifier will not work well.</p>
 
   <p>Train the classifier with the current training set and labels, the labels must be numbers between 0 and n.</p>
 
-
-  <div class='pre p1 fill-light mt0'>train(trainingSet: (Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>), trainingLabels: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+    <div class='pre p1 fill-light mt0'>train(trainingSet: (Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>), trainingLabels: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
   
   
 
@@ -989,7 +725,7 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>trainingSet</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+            <span class='code bold'>trainingSet</span> <code class='quiet'>((Matrix | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
 	    
           </div>
           
@@ -997,13 +733,15 @@ Naive Bayes classifier will not work well.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>trainingLabels</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>trainingLabels</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    
           </div>
           
         </div>
       
     </div>
+  
+
   
 
   
@@ -1021,10 +759,73 @@ Naive Bayes classifier will not work well.</p>
   
 </section>
 
-      </div>
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='load'>
+      load
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/mljs/naive-bayes/blob/ffe06b79cf2aa4d03c6557f0211bf06b1c1f198a/src/MultinomialNB.js#L100-L106'>
+      <span>src/MultinomialNB.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates a new MultinomialNB from the given model</p>
+
+    <div class='pre p1 fill-light mt0'>load(model: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): MultinomialNB</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
     </div>
   
-</div>
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>MultinomialNB</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -1035,8 +836,8 @@ Naive Bayes classifier will not work well.</p>
         
       </div>
     </div>
-  </div>
   <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
   <script src='assets/site.js'></script>
 </body>
 </html>
