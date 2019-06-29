@@ -4,5 +4,5 @@ export default {
     format: 'cjs',
     file: 'lib/index.js'
   },
-  external: ['ml-matrix', 'ml-stat']
+  external: ['ml-matrix']
 };

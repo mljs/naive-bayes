@@ -1,4 +1,4 @@
-import Matrix from 'ml-matrix';
+import { Matrix } from 'ml-matrix';
 
 import { separateClasses } from './utils';
 
@@ -32,12 +32,13 @@ export class MultinomialNB {
     }
 
     var separateClass = separateClasses(trainingSet, trainingLabels);
+
     this.priorProbability = new Matrix(separateClass.length, 1);
 
     for (var i = 0; i < separateClass.length; ++i) {
-      this.priorProbability[i][0] = Math.log(
-        separateClass[i].length / trainingSet.rows
-      );
+      this.priorProbability.set(i, 0, Math.log(
+        separateClass[i].rows / trainingSet.rows
+      ));
     }
 
     var features = trainingSet.columns;
@@ -48,8 +49,8 @@ export class MultinomialNB {
       var divisor = total + features;
       this.conditionalProbability.setRow(
         i,
-        classValues
-          .sum('column')
+        Matrix.rowVector(classValues
+          .sum('column'))
           .add(1)
           .div(divisor)
           .apply(matrixLog)
@@ -67,10 +68,11 @@ export class MultinomialNB {
     var predictions = new Array(dataset.rows);
     for (var i = 0; i < dataset.rows; ++i) {
       var currentElement = dataset.getRowVector(i);
-      predictions[i] = this.conditionalProbability
+      const v = Matrix.columnVector(this.conditionalProbability
         .clone()
         .mulRowVector(currentElement)
-        .sum('row')
+        .sum('row'));
+      predictions[i] = v
         .add(this.priorProbability)
         .maxIndex()[0];
     }
@@ -105,5 +107,5 @@ export class MultinomialNB {
 }
 
 function matrixLog(i, j) {
-  this[i][j] = Math.log(this[i][j]);
+  this.set(i, j, Math.log(this.get(i, j)));
 }

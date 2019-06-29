@@ -1,5 +1,4 @@
-import Matrix from 'ml-matrix';
-import Stat from 'ml-stat';
+import { Matrix } from 'ml-matrix';
 
 import { separateClasses } from './utils';
 
@@ -41,8 +40,10 @@ export class GaussianNB {
     var calculateProbabilities = new Array(separatedClasses.length);
     this.means = new Array(separatedClasses.length);
     for (var i = 0; i < separatedClasses.length; ++i) {
-      var means = Stat.matrix.mean(separatedClasses[i]);
-      var std = Stat.matrix.standardDeviation(separatedClasses[i], means);
+      var means = separatedClasses[i].mean('column');
+      var std = separatedClasses[i].standardDeviation('column', {
+        mean: means
+      });
 
       var logPriorProbability = Math.log(
         separatedClasses[i].rows / trainingSet.rows
@@ -71,17 +72,18 @@ export class GaussianNB {
    * @return {Array}
    */
   predict(dataset) {
-    if (dataset[0].length === this.calculateProbabilities[0].length) {
+    dataset = Matrix.checkMatrix(dataset);
+    if (dataset.rows === this.calculateProbabilities[0].length) {
       throw new RangeError(
         'the dataset must have the same features as the training set'
       );
     }
 
-    var predictions = new Array(dataset.length);
+    var predictions = new Array(dataset.rows);
 
     for (var i = 0; i < predictions.length; ++i) {
       predictions[i] = getCurrentClass(
-        dataset[i],
+        dataset.getRow(i),
         this.means,
         this.calculateProbabilities
       );
@@ -165,5 +167,5 @@ function getCurrentClass(currentCase, mean, classes) {
  */
 function calculateLogProbability(value, mean, C1, C2) {
   value = value - mean;
-  return Math.log(C1 * Math.exp(value * value / C2));
+  return Math.log(C1 * Math.exp((value * value) / C2));
 }

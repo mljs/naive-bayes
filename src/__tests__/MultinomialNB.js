@@ -9,17 +9,17 @@ const cases = [
 const predictions = [0, 0, 0, 1];
 
 describe('Multinomial Naive Bayes', function () {
-  test('main test', () => {
+  it('main test', () => {
     var predict = [[3, 0, 0, 0, 1, 1]];
 
     var mnb = new MultinomialNB();
     mnb.train(cases, predictions);
     var prediction = mnb.predict(predict);
 
-    expect(prediction).toEqual([0]);
+    expect(prediction).toStrictEqual([0]);
   });
 
-  test('save and load', () => {
+  it('save and load', () => {
     var predict = [[3, 0, 0, 0, 1, 1]];
 
     var mnb = new MultinomialNB();
@@ -27,6 +27,6 @@ describe('Multinomial Naive Bayes', function () {
     mnb = MultinomialNB.load(JSON.parse(JSON.stringify(mnb)));
     var prediction = mnb.predict(predict);
 
-    expect(prediction).toEqual([0]);
+    expect(prediction).toStrictEqual([0]);
   });
 });

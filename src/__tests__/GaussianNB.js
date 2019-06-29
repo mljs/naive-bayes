@@ -1,30 +1,31 @@
-import { GaussianNB } from '..';
+import Matrix from 'ml-matrix';
 
 import { separateClasses } from '../utils';
 
-import Matrix from 'ml-matrix';
+import { GaussianNB } from '..';
+
 
 const cases = [[0, 0], [0, 1], [1, 0], [1, 1], [2, 2]];
 const predictions = [0, 0, 0, 1, 1];
 describe('Naive bayes', () => {
-  test('Basic test', () => {
+  it('Basic test', () => {
     var nb = new GaussianNB();
     nb.train(cases, predictions);
     var results = nb.predict(cases);
 
-    expect(results).toEqual(predictions);
+    expect(results).toStrictEqual(predictions);
   });
 
-  test('separate classes', () => {
+  it('separate classes', () => {
     var matrixCases = new Matrix(cases);
     var separatedResult = separateClasses(matrixCases, predictions);
 
     expect(separatedResult).toHaveLength(2);
-    expect(separatedResult[0].rows).toEqual(3);
-    expect(separatedResult[1].rows).toEqual(2);
+    expect(separatedResult[0].rows).toStrictEqual(3);
+    expect(separatedResult[1].rows).toStrictEqual(2);
   });
 
-  test('Small test', () => {
+  it('Small test', () => {
     var cases = [
       [6, 148, 72, 35, 0, 33.6, 0.627, 5],
       [1.5, 85, 66.5, 29, 0, 26.6, 0.351, 31],
@@ -37,10 +38,10 @@ describe('Naive bayes', () => {
     nb.train(cases, predictions);
     var result = nb.predict(cases);
 
-    expect(result).toEqual(predictions);
+    expect(result).toStrictEqual(predictions);
   });
 
-  test('Export and import', () => {
+  it('Export and import', () => {
     var cases = [
       [6, 148, 72, 35, 0, 33.6, 0.627, 5],
       [1.5, 85, 66.5, 29, 0, 26.6, 0.351, 31],
@@ -57,6 +58,6 @@ describe('Naive bayes', () => {
 
     var result = nb.predict(cases);
 
-    expect(result).toEqual(predictions);
+    expect(result).toStrictEqual(predictions);
   });
 });
