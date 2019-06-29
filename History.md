@@ -1,3 +1,17 @@
+# [4.0.0](https://github.com/mljs/naive-bayes/compare/v3.0.0...v4.0.0) (2019-06-29)
+
+
+### chore
+
+* remove support for Node.js 6 ([e649861](https://github.com/mljs/naive-bayes/commit/e649861))
+
+
+### BREAKING CHANGES
+
+* Support for Node.js 6 was removed
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/mljs/naive-bayes/compare/v2.0.0...v3.0.0) (2017-09-06)
 
